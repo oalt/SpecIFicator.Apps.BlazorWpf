@@ -1,0 +1,131 @@
+{
+    "appliesTo": "SpecIFicator",
+    "components": [
+        {
+            "title": "Projects Browser",
+            "titleKey": "Title.ProjectsBrowser",
+            "showInMainMenu": true,
+            "id": "8BFC41F3-4CEF-4E37-9AAE-D61A9D189E53",
+            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.ProjectsBrowser",
+            "configurations": []
+        },
+        {
+            "title": "Metadata",
+            "titleKey": "Title.MetadataEditor",
+            "showInMainMenu": true,
+            "id": "4F000F64-9686-45D4-AF19-330889320537",
+            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.MetadataEditor.MetadataEditorPage",
+            "configurations": []
+        },
+        {
+            "title": "HierarchyEditor",
+            "id": "3462ACA8-1AB1-442F-971B-975AF96E0017",
+            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.HierarchyEditor",
+            "specificTypes": [
+                {
+                    "key": {
+                        "id": "ABC",
+                        "revision": "1"
+                    },
+                    "typeName": "ThirdParty.Plugin.HierarchyEditor"
+                }
+            ],
+            "configurations": [
+                {
+                    "appliesTo": "SpecIFicator.DefaultPlugin.BlazorComponents.HierarchyEditor",
+                    "components": [
+                        {
+                            "title": "Tree",
+                            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.HierarchyTree",
+                            "configurations": [
+
+                            ]
+                        },
+                        {
+                            "title": "HierarchyView",
+                            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.HierarchyView",
+                            "configurations": [
+                                {
+                                    "appliesTo": "SpecIFicator.DefaultPlugin.BlazorComponents.HierarchyView",
+                                    "components": [
+                                        {
+                                            "title": "DocumentView",
+                                            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.DocumentView",
+                                            "configurations": [
+                                                {
+                                                    "appliesTo": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.DocumentView",
+                                                    "components": [
+                                                        {
+                                                            "title": "DocumentItem",
+                                                            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.Items.DefaultDocumentItem",
+                                                            "specificTypes": [
+                                                                {
+                                                                    "key": {
+                                                                        "id": "RC-Folder"
+                                                                    },
+                                                                    "typeName": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.Items.HeadingDocumentItem"
+                                                                },
+                                                                {
+                                                                    "key": {
+                                                                        "id": "RC-Requirement"
+                                                                    },
+                                                                    "typeName": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.Items.RequirementDocumentItem"
+                                                                },
+                                                                {
+                                                                    "key": {
+                                                                        "id": "RC-Paragraph"
+                                                                    },
+                                                                    "typeName": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.Items.ParagraphDocumentItem"
+                                                                },
+                                                                {
+                                                                    "key": {
+                                                                        "id": "RC-Hierarchy"
+                                                                    },
+                                                                    "typeName": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.Items.HierarchyDocumentItem"
+                                                                },
+                                                                {
+                                                                    "key": {
+                                                                        "id": "RC-Diagram"
+                                                                    },
+                                                                    "typeName": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.Items.DiagramDocumentItem"
+                                                                }
+                                                            ],
+                                                            "configurations": [
+
+                                                            ]
+                                                        }
+                                                    ]
+
+                                                }
+
+                                            ]
+                                        },
+                                        {
+                                            "title": "ResourceView",
+                                            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.ResourceView"
+                                        },
+                                        {
+                                            "title": "RawView",
+                                            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.RawViewer"
+                                        }
+                                    ]
+
+
+
+                                }
+
+                            ]
+
+                        }
+                    ]
+
+                }
+
+
+
+            ]
+
+
+        }
+    ]
+}

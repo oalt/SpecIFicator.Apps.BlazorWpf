@@ -1,6 +1,7 @@
 ﻿using MDD4All.SpecIF.DataProvider.Contracts;
 using MDD4All.SpecIF.DataProvider.Contracts.DataStreams;
 using MDD4All.SpecIF.DataProvider.MockupDataStream;
+using MDD4All.UI.BlazorComponents.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using SpecIFicator.Framework.Configuration;
@@ -71,6 +72,8 @@ namespace SpecIFicator.Apps.BlazorWPF
             {
                 return new MockupDataSubscriber();
             });
+
+            services.AddScoped<ClipboardDataProvider>();
 
             Resources.Add("services", services.BuildServiceProvider());
 
