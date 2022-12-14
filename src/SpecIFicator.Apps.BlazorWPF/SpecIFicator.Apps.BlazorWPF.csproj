@@ -21,6 +21,7 @@
 
 
     <ItemGroup>
+      <ProjectReference Include="..\..\..\MDD4All.FileAccess.WPF\src\MDD4All.FileAccess.WPF\MDD4All.FileAccess.WPF-dev.csproj" />
       <ProjectReference Include="..\..\..\MDD4All.SpecIF.DataProvider.EA\src\MDD4All.SpecIF.DataProvider.EA\MDD4All.SpecIF.DataProvider.EA-dev.csproj" />
       <ProjectReference Include="..\..\..\SpecIFicator.Framework\src\SpecIFicator.Framework\SpecIFicator.Framework-dev.csproj" />
     </ItemGroup>

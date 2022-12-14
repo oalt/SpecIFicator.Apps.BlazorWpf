@@ -1,4 +1,6 @@
-﻿using MDD4All.SpecIF.DataProvider.Contracts;
+﻿using MDD4All.FileAccess.Contracts;
+using MDD4All.FileAccess.WPF;
+using MDD4All.SpecIF.DataProvider.Contracts;
 using MDD4All.SpecIF.DataProvider.Contracts.DataStreams;
 using MDD4All.SpecIF.DataProvider.MockupDataStream;
 using MDD4All.UI.BlazorComponents.Services;
@@ -74,6 +76,11 @@ namespace SpecIFicator.Apps.BlazorWPF
             });
 
             services.AddScoped<ClipboardDataProvider>();
+
+            services.AddSingleton<IFileSaver>(fileSaver =>
+            {
+                return new WpfFileSaver();
+            });
 
             Resources.Add("services", services.BuildServiceProvider());
 

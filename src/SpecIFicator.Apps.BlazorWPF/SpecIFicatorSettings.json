@@ -18,6 +18,13 @@
             "configurations": []
         },
         {
+            "title": "FileExport",
+            "showInMainMenu": false,
+            "id": "E4C606C2-E744-4022-A715-D44A4DFC85B6",
+            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.FileExport",
+            "configurations": []
+        },
+        {
             "title": "HierarchyEditor",
             "id": "3462ACA8-1AB1-442F-971B-975AF96E0017",
             "default": "SpecIFicator.DefaultPlugin.BlazorComponents.HierarchyEditor",
