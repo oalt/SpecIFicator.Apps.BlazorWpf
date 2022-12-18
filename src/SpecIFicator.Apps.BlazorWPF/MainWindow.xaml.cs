@@ -23,6 +23,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VisNetwork.Blazor;
 
 namespace SpecIFicator.Apps.BlazorWPF
 {
@@ -81,6 +82,8 @@ namespace SpecIFicator.Apps.BlazorWPF
             {
                 return new WpfFileSaver();
             });
+
+            services.AddVisNetworkServer();
 
             Resources.Add("services", services.BuildServiceProvider());
 
