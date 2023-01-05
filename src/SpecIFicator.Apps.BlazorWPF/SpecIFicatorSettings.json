@@ -57,10 +57,12 @@
                                     "components": [
                                         {
                                             "title": "DocumentView",
+                                            "titleKey": "Title.DocumentView",
+                                            "icon": "bi bi-file-earmark-richtext",
                                             "default": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.DocumentView",
                                             "configurations": [
                                                 {
-                                                    "appliesTo": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.DocumentView",
+                                                    "appliesTo": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.DocumentItemContainer",
                                                     "components": [
                                                         {
                                                             "title": "DocumentItem",
@@ -109,10 +111,26 @@
                                         },
                                         {
                                             "title": "ResourceView",
+                                            "titleKey": "Title.ResourceView",
+                                            "icon": "bi bi-card-text",
                                             "default": "SpecIFicator.DefaultPlugin.BlazorComponents.ResourceView"
                                         },
                                         {
+                                            "title": "StatementBrowser",
+                                            "titleKey": "Title.StatementBrowser",
+                                            "icon": "bi bi-arrow-left-right",
+                                            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.StatementBrowser.StatementBrowser"
+                                        },
+                                        {
+                                            "title": "RevisionView",
+                                            "titleKey": "Title.RevisionView",
+                                            "icon": "bi bi-file-diff",
+                                            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.Revision.ResourceRevisionView"
+                                        },
+                                        {
                                             "title": "RawView",
+                                            "titleKey": "Title.RawView",
+                                            "icon": "bi bi-filetype-json",
                                             "default": "SpecIFicator.DefaultPlugin.BlazorComponents.RawViewer"
                                         }
                                     ]
