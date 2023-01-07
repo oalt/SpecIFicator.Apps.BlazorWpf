@@ -97,6 +97,24 @@
                                                                         "id": "RC-Diagram"
                                                                     },
                                                                     "typeName": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.Items.DiagramDocumentItem"
+                                                                },
+                                                                {
+                                                                    "key": {
+                                                                        "id": "RC-TestStep"
+                                                                    },
+                                                                    "typeName": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.Items.TestStepDocumentItem"
+                                                                },
+                                                                {
+                                                                    "key": {
+                                                                        "id": "RC-TestCase"
+                                                                    },
+                                                                    "typeName": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.Items.TestCaseDocumentItem"
+                                                                },
+                                                                {
+                                                                    "key": {
+                                                                        "id": "RC-TestModel"
+                                                                    },
+                                                                    "typeName": "SpecIFicator.DefaultPlugin.BlazorComponents.Document.Items.TestModelDocumentItem"
                                                                 }
                                                             ],
                                                             "configurations": [

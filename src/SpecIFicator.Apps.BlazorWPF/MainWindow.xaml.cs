@@ -8,21 +8,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using SpecIFicator.Framework.Configuration;
 using SpecIFicator.Framework.PluginManagement;
-using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using VisNetwork.Blazor;
 
 namespace SpecIFicator.Apps.BlazorWPF
@@ -84,6 +72,8 @@ namespace SpecIFicator.Apps.BlazorWPF
             });
 
             services.AddVisNetworkServer();
+
+            services.AddHttpClient();
 
             Resources.Add("services", services.BuildServiceProvider());
 
