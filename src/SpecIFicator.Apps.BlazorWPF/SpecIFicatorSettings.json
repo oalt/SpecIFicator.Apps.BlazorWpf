@@ -18,6 +18,14 @@
             "configurations": []
         },
         {
+            "title": "Logger",
+            "titleKey": "Title.Logger",
+            "showInMainMenu": true,
+            "id": "187CFC8A-6559-4568-83D6-E69BB6A33B6C",
+            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.DataStreams.DataStreamLoggerPage",
+            "configurations": []
+        },
+        {
             "title": "FileExport",
             "showInMainMenu": false,
             "id": "E4C606C2-E744-4022-A715-D44A4DFC85B6",

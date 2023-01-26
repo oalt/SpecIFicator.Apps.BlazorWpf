@@ -1,6 +1,7 @@
 ﻿using MDD4All.FileAccess.Contracts;
 using MDD4All.FileAccess.WPF;
 using MDD4All.SpecIF.DataProvider.Base;
+using MDD4All.SpecIF.DataProvider.Base.DataStreams;
 using MDD4All.SpecIF.DataProvider.Contracts;
 using MDD4All.SpecIF.DataProvider.Contracts.DataStreams;
 using MDD4All.SpecIF.DataProvider.MockupDataStream;
@@ -60,9 +61,14 @@ namespace SpecIFicator.Apps.BlazorWPF
                 return new SpecIfDataProviderFactory();
             });
 
-            services.AddScoped<ISpecIfDataSubscriber>(dataSubscriber =>
+            services.AddSingleton<ISpecIfStreamDataPublisherProvider>(_ =>
             {
-                return new MockupDataSubscriber();
+                return new SpecIfStreamDataPublisherProvider();
+            });
+
+            services.AddSingleton<ISpecIfStreamDataSubscriberProvider>(_ =>
+            {
+                return new SpecIfStreamDataSubscriberProvider();
             });
 
             services.AddScoped<ClipboardDataProvider>();
