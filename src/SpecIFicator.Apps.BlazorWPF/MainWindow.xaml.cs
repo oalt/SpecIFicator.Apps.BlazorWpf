@@ -32,9 +32,9 @@ namespace SpecIFicator.Apps.BlazorWPF
         {
             var services = new ServiceCollection();
             services.AddWpfBlazorWebView();
-#if DEBUG
+//#if DEBUG
             services.AddBlazorWebViewDeveloperTools();
-#endif
+//#endif
 
             services.AddLocalization(options =>
             {
