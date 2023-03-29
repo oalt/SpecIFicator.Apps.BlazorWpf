@@ -16,14 +16,11 @@
 
 
     <ItemGroup>
+      <PackageReference Include="MDD4All.FileAccess.WPF" Version="2.0.0.3" />
+      <PackageReference Include="MDD4All.SplitJs.Blazor" Version="2.0.0.3" />
+      <PackageReference Include="MDD4All.VisNetwork.Blazor" Version="2.0.0.4" />
       <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" Version="6.0.547" />
-    </ItemGroup>
-
-
-    <ItemGroup>
-      <ProjectReference Include="..\..\..\MDD4All.FileAccess.WPF\src\MDD4All.FileAccess.WPF\MDD4All.FileAccess.WPF-dev.csproj" />
-      <ProjectReference Include="..\..\..\MDD4All.SpecIF.DataProvider.EA\src\MDD4All.SpecIF.DataProvider.EA\MDD4All.SpecIF.DataProvider.EA-dev.csproj" />
-      <ProjectReference Include="..\..\..\SpecIFicator.Framework\src\SpecIFicator.Framework\SpecIFicator.Framework-dev.csproj" />
+      <PackageReference Include="SpecIFicator.Framework" Version="2.0.0.1" />
     </ItemGroup>
 
 </Project>
