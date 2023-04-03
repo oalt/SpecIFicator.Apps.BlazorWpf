@@ -25,8 +25,8 @@ jobs:
     - name: Read VERSION file
       id: fileVersion
       run: |
-        set /p FILE_VERSION=<src\version.txt
-        echo "FILE_VERSION_OUT=${{env.FILE_VERSION}}" >> $env:GITHUB_OUTPUT
+        $fileVersion = Get-Content src/version.txt -Raw
+        echo "FILE_VERSION_OUT=$fileVersion" >> $env:GITHUB_OUTPUT
 
     - name: Set version variable from version text and build number
       env: 
