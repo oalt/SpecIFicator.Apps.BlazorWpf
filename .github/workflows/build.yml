@@ -12,6 +12,7 @@ jobs:
     runs-on: windows-2019
     env:
       SOLUTION_NAME: SpecIFicator.Apps.BlazorWPF
+      SPECIFICATOR_PATH: .\output\SpecIFicator\
 
     steps:
     - name: Checkout source code
@@ -39,3 +40,26 @@ jobs:
     - name: Publish
       run: dotnet publish -p:PublishProfile=Win-x86 -c Release /p:Version=${{env.VERSION}} .\src\${{env.SOLUTION_NAME}}.sln
 
+    - name: Create output directories
+      run: |
+        mkdir output
+        mkdir ${{env.SPECIFICATOR_PATH}}
+        mkdir artifacts
+
+    - name: Copy SpecIFicator app files
+      run: xcopy /E /y .\src\SpecIFicator.Apps.BlazorWPF\bin\Release\net6.0-windows\publish\win-x86\*.* ${{env.SPECIFICATOR_PATH}}
+
+    - name: Zip SpecIFicator files
+      uses: thedoctor0/zip-release@0.7.1
+      with:
+        directory: output\
+        filename: SpecIFicator_${{env.VERSION}}.zip
+
+    - name: Copy SpecIFicator zip file to dist directory
+      run: xcopy /y .\output\SpecIFicator_${{env.VERSION}}.zip .\artifacts\
+
+    - name: Upload SpecIFicator artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: SpecIFicator_${{env.VERSION}}
+        path: artifacts\*.zip
