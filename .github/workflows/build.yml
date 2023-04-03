@@ -1,0 +1,41 @@
+name: SpecIFicator WPF App Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows-2019
+    env:
+      SOLUTION_NAME: SpecIFicator.Apps.BlazorWPF
+
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Read VERSION file
+      id: fileVersion
+      run: |
+        set /p FILE_VERSION=<src/Plugin/version.txt
+        echo "FILE_VERSION_OUT=${{env:FILE_VERSION}}" >> $env:GITHUB_OUTPUT
+
+    - name: Set version variable from version text and build number
+      env: 
+        FILE_VERSION: ${{steps.fileVersion.outputs.FILE_VERSION_OUT}}
+      run: echo ("VERSION=" + $env:FILE_VERSION + "." + $env:GITHUB_RUN_NUMBER) >> $env:GITHUB_ENV
+
+    - name: Echo version number
+      run: echo $VERSION
+
+    - name: Publish
+      run: dotnet publish -p:PublishProfile=Win-x86 -c Release /p:Version=${{env.VERSION}} .\src\${{env.SOLUTION_NAME}}
+
