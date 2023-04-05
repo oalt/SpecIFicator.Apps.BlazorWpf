@@ -8,6 +8,8 @@
         <RootNamespace>SpecIFicator.Apps.BlazorWPF</RootNamespace>
         <ApplicationIcon>SpecIFicator.ico</ApplicationIcon>
         <AssemblyName>SpecIFicator</AssemblyName>
+        <SignAssembly>True</SignAssembly>
+        <AssemblyOriginatorKeyFile>MDD4All_Github.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
 
     <ItemGroup>
