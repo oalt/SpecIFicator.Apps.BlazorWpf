@@ -91,3 +91,7 @@ a, .btn-link {
 .uic-tree--cursor-pointer {
     cursor: pointer;
 }
+
+.code {
+    font-family: Courier New, Courier, monospace
+}
