@@ -22,7 +22,7 @@
       <PackageReference Include="MDD4All.SplitJs.Blazor" Version="2.0.1.5" />
       <PackageReference Include="MDD4All.VisNetwork.Blazor" Version="2.0.0.5" />
       <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" Version="6.0.547" />
-      <PackageReference Include="SpecIFicator.Framework" Version="2.0.0.1" />
+      <PackageReference Include="SpecIFicator.Framework" Version="2.1.0.4" />
     </ItemGroup>
 
 </Project>
