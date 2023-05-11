@@ -25,6 +25,8 @@ namespace SpecIFicator.Apps.BlazorWPF
         {
             InitializeComponent();
 
+            SetTitle();
+
             InitializeServices();
         }
 
@@ -92,6 +94,15 @@ namespace SpecIFicator.Apps.BlazorWPF
             DynamicConfigurationManager.LoadConfiguration();
 
             PluginManager.LoadPlugins();
+        }
+    
+        private void SetTitle()
+        {
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            System.Diagnostics.FileVersionInfo fileVersionInfo = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
+            string version = fileVersionInfo.FileVersion;
+
+            Title = "SpecIFicator | " + version;
         }
     }
 }
