@@ -20,9 +20,10 @@
     <ItemGroup>
       <PackageReference Include="MDD4All.FileAccess.WPF" Version="2.0.0.3" />
       <PackageReference Include="MDD4All.SplitJs.Blazor" Version="2.0.1.5" />
-      <PackageReference Include="MDD4All.VisNetwork.Blazor" Version="2.0.0.5" />
+      <PackageReference Include="MDD4All.VisNetwork.Blazor" Version="2.0.2.8" />
       <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" Version="6.0.547" />
-      <PackageReference Include="SpecIFicator.Framework" Version="2.1.0.4" />
+      <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
+      <PackageReference Include="SpecIFicator.Framework" Version="2.1.1.5" />
     </ItemGroup>
 
 </Project>
