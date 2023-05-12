@@ -7,6 +7,7 @@ using MDD4All.SpecIF.DataProvider.Contracts.DataStreams;
 using MDD4All.UI.BlazorComponents.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using SpecIFicator.Apps.BlazorWPF.PluginSupport;
 using SpecIFicator.Framework.Configuration;
 using SpecIFicator.Framework.PluginManagement;
 using System.Collections.Generic;
@@ -91,6 +92,9 @@ namespace SpecIFicator.Apps.BlazorWPF
             Resources.Add("services", services.BuildServiceProvider());
 
             // SpecIFicator framework initialization
+            PluginCssReferenceManager pluginCssReferenceManager = new PluginCssReferenceManager();
+            pluginCssReferenceManager.CreateCssReferences();
+
             DynamicConfigurationManager.LoadConfiguration();
 
             PluginManager.LoadPlugins();
