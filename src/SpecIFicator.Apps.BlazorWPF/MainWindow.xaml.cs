@@ -92,8 +92,7 @@ namespace SpecIFicator.Apps.BlazorWPF
             Resources.Add("services", services.BuildServiceProvider());
 
             // SpecIFicator framework initialization
-            PluginCssReferenceManager pluginCssReferenceManager = new PluginCssReferenceManager();
-            pluginCssReferenceManager.CreateCssReferences();
+            PluginCssReferenceManager.CreateCssReferences();
 
             DynamicConfigurationManager.LoadConfiguration();
 

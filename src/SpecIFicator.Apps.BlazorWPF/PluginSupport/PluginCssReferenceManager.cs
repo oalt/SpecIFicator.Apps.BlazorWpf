@@ -10,14 +10,13 @@ namespace SpecIFicator.Apps.BlazorWPF.PluginSupport
     // copy all bundle css files of plugins to the wwwroot/.../pluginStyles driectory and create a pluginStyles.css file.
     internal class PluginCssReferenceManager
     {
-        private string _cssTargetPath;
+        private static string _cssTargetPath = AssemblyDirectory + "\\wwwroot\\_content\\SpecIFicator.Framework\\css\\pluginStyles\\";
 
-        public PluginCssReferenceManager()
+        private PluginCssReferenceManager() 
         {
-            _cssTargetPath = AssemblyDirectory + "\\wwwroot\\_content\\SpecIFicator.Framework\\css\\pluginStyles\\";
         }
 
-        public void CreateCssReferences()
+        public static void CreateCssReferences()
         {
             try
             {
@@ -57,7 +56,7 @@ namespace SpecIFicator.Apps.BlazorWPF.PluginSupport
             }
         }
 
-        private bool IsCopyRequired(FileInfo cssSourceFileInfo)
+        private static bool IsCopyRequired(FileInfo cssSourceFileInfo)
         {
             bool result = true;
 
@@ -85,7 +84,7 @@ namespace SpecIFicator.Apps.BlazorWPF.PluginSupport
             return result;
         }
 
-        private void CreateAndSavePluginStylesFile(List<string> cssFiles)
+        private static void CreateAndSavePluginStylesFile(List<string> cssFiles)
         {
             string content = "";
 
