@@ -29,4 +29,23 @@
       <ProjectReference Include="..\..\..\VisNetwork.Blazor\src\VisNetwork.Blazor\VisNetwork.Blazor-dev.csproj" />
     </ItemGroup>
 
+
+    <ItemGroup>
+      <Content Update="wwwroot\images\IconError.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Update="wwwroot\images\IconFail.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Update="wwwroot\images\IconInconclusive.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Update="wwwroot\images\IconNotTested.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Update="wwwroot\images\IconPass.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>

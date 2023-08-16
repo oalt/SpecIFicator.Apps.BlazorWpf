@@ -37,13 +37,7 @@
             "id": "3462ACA8-1AB1-442F-971B-975AF96E0017",
             "default": "SpecIFicator.DefaultPlugin.BlazorComponents.HierarchyEditor",
             "specificTypes": [
-                {
-                    "key": {
-                        "id": "ABC",
-                        "revision": "1"
-                    },
-                    "typeName": "ThirdParty.Plugin.HierarchyEditor"
-                }
+                
             ],
             "configurations": [
                 {
@@ -177,6 +171,41 @@
             ]
 
 
+        },
+        {
+            "title": "TestExecution",
+            "showInMainMenu": false,
+            "id": "36AB7319-01C7-4F3F-9594-A89DBA0BC0A1",
+            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.TestExecution.TestExecutionPanel",
+            "configurations": [
+                {
+                    "appliesTo": "SpecIFicator.DefaultPlugin.BlazorComponents.TestExecution.TestExecutionPanel",
+                    "components": [
+                        {
+                            "title": "TestExecutionTree",
+                            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.TestExecution.TestExecutionTree",
+                            "configurations": [
+
+                            ]
+                        },
+                        {
+                            "title": "TestExecutionView",
+                            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.TestExecution.TestExecutionView",
+                            "configurations": [
+                                {
+
+
+
+
+                                }
+
+                            ]
+
+                        }
+                    ]
+
+                }
+            ]
         }
     ]
 }
