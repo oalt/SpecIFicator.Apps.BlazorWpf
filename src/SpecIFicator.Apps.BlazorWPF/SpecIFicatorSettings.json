@@ -225,7 +225,17 @@
             "id": "FB5B66F3-F15B-46A8-BD16-F330A2C3CE7F",
             "default": "SpecIFicator.DefaultPlugin.BlazorComponents.TestExecution.TestSuiteCreator",
             "configurations": [
-                
+
+            ]
+        },
+        {
+            "title": "RequirementConsolidation",
+            "titleKey": "Title.RequirementConsolidation",
+            "showInMainMenu": true,
+            "id": "AD4F14B1-BCC2-4402-B4CD-BD746F862B56",
+            "default": "SpecIFicator.DefaultPlugin.BlazorComponents.RequirementConsolidation.ConsolidationView",
+            "configurations": [
+
             ]
         }
     ]
