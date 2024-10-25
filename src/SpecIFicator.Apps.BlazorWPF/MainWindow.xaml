@@ -12,10 +12,14 @@
         Width="1400"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <blazor:BlazorWebView HostPage="wwwroot\index.html" Services="{DynamicResource services}">
+        <blazor:BlazorWebView HostPage="wwwroot\index.html"
+                              Services="{DynamicResource services}"
+                              x:Name="blazorWebView">
             <blazor:BlazorWebView.RootComponents>
                 <blazor:RootComponent Selector="#app" ComponentType="{x:Type framework:App}" />
             </blazor:BlazorWebView.RootComponents>
+            
+            
         </blazor:BlazorWebView>
     </Grid>
 </Window>

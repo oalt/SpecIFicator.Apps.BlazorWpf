@@ -6,6 +6,7 @@ using MDD4All.SpecIF.DataProvider.Contracts;
 using MDD4All.SpecIF.DataProvider.Contracts.DataStreams;
 using MDD4All.UI.BlazorComponents.Services;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Components.WebView.Wpf;
 using Microsoft.Extensions.DependencyInjection;
 using SpecIFicator.Apps.BlazorWPF.PluginSupport;
 using SpecIFicator.Framework.Configuration;
@@ -29,6 +30,8 @@ namespace SpecIFicator.Apps.BlazorWPF
             SetTitle();
 
             InitializeServices();
+
+            Loaded += OnMainWindowLoaded;
         }
 
         private void InitializeServices()
@@ -106,6 +109,12 @@ namespace SpecIFicator.Apps.BlazorWPF
             string version = fileVersionInfo.FileVersion;
 
             Title = "SpecIFicator | " + version;
+        }
+
+        private async void OnMainWindowLoaded(object sender, RoutedEventArgs e)
+        {
+            await blazorWebView.WebView.EnsureCoreWebView2Async();
+            blazorWebView.WebView.CoreWebView2.Settings.IsSwipeNavigationEnabled = false;
         }
     }
 }
