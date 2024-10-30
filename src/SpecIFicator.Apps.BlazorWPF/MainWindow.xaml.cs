@@ -6,11 +6,11 @@ using MDD4All.SpecIF.DataProvider.Contracts;
 using MDD4All.SpecIF.DataProvider.Contracts.DataStreams;
 using MDD4All.UI.BlazorComponents.Services;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components.WebView.Wpf;
 using Microsoft.Extensions.DependencyInjection;
 using SpecIFicator.Apps.BlazorWPF.PluginSupport;
 using SpecIFicator.Framework.Configuration;
 using SpecIFicator.Framework.PluginManagement;
+using SpecIFicator.Framework.Services;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows;
@@ -40,7 +40,9 @@ namespace SpecIFicator.Apps.BlazorWPF
             services.AddWpfBlazorWebView();
 //#if DEBUG
             services.AddBlazorWebViewDeveloperTools();
-//#endif
+            //#endif
+
+            services.AddScoped<BrowserDimensionService>();
 
             services.AddLocalization(options =>
             {
